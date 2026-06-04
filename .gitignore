@@ -1,0 +1,15 @@
+# Entornos
+venv/
+__pycache__/
+.env
+
+# Datos y Modelos (Esto lo manejaremos con DVC más adelante)
+data/
+models/
+*.csv
+*.parquet
+*.joblib
+*.pkl
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
