@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  fraud-api:
+    # Le dice a Compose que construya la imagen usando el Dockerfile de esta carpeta
+    build: .
+    # El nombre que tendrá nuestro contenedor corriendo
+    container_name: mlops-fraud-api
+    # Mapeo de puertos: "Conecta el puerto 8000 de mi Windows al puerto 8000 del contenedor Linux"
+    ports:
+      - "8000:8000"
+    # Reiniciar automáticamente si el contenedor crashea
+    restart: unless-stopped

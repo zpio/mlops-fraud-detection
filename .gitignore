@@ -16,3 +16,7 @@ models/
 
 *.log
 /data
+
+# MLflow
+mlruns/
+mlartifacts/
