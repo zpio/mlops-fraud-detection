@@ -20,3 +20,6 @@ models/
 # MLflow
 mlruns/
 mlartifacts/
+
+# Reportes
+*.html
