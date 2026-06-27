@@ -86,12 +86,12 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-**2. Recuperar Datos con DVC**
+**2. Ingesta Automática de Datos**
 
-El conjunto de datos real está protegido e indexado mediante punteros ligeros. Para sincronizar los archivos locales de datos ejecuta:
+Por motivos de optimización y seguridad, los archivos pesados no se almacenan en el repositorio. El sistema está diseñado para auto-reconstruirse. Ejecuta el script de ingesta para descargar la data cruda original de forma programática desde OpenML:
 
 ```bash
-dvc pull
+python src/data_ingest.py
 ```
 
 **3. Ejecución del Pipeline y Tracking (Modo Desarrollo)**
@@ -103,7 +103,6 @@ Para inicializar el servidor de auditoría y lanzar el entrenamiento:
 mlflow server --host 127.0.0.1 --port 5000
 
 # Terminal 2: Ejecutar la secuencia del pipeline
-python src/data_ingest.py
 python src/preprocess.py
 python src/train.py
 ```
